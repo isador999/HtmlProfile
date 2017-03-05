@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <!-- Head -->
+  {% include 'head.html' %}
+  <!-- clock js -->
+  {# <script src="{{ STATIC_URL }}clock.js"></script>#}
+  <body>
+    <!-- Navbar -->
+    {% with "Mon CV" as namepage  %}
+        {% include 'navbar.html' %}
+    {% endwith %}
+
+    <div class="container">
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border"><a href="{% url 'views.homepage' %}" style="margin-bottom: 3px" type="button" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-refresh"></span></a>  Rpi date and time</legend>
+            <div style="text-align: center">
+                <strong class="text-primary"><div id="clock"> Clock </div></strong>
+            </div>
+	          <div style="text-align: center">
+                <strong class="text-primary"><div id="clock"> {{ date }} </div></strong>
+            </div>
+        </fieldset>
+        </br>
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border"><a href="#" style="margin-bottom: 3px" type="button" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-cog"></span></a>  Alarm clock</legend>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Label</th>
+                        <th>Day of week</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                            <tr>
+                                <th>
+                                    Alarmclock label
+                                </th>
+                                <th>
+                                    <div class="col-xs-1"><span class="text-primary">Mo</span></div>
+                                    <div class="col-xs-1"><span class="text-primary">Tu</span></div>
+                                    <div class="col-xs-1"><span class="text-primary">We</span></div>
+                                    <div class="col-xs-1"><span class="text-primary">Th</span></div>
+                                    <div class="col-xs-1"><span class="text-primary">Fr</span></div>
+                                    <div class="col-xs-1"><span class="text-primary">Sa</span></div>
+                                    <div class="col-xs-1"><span class="text-primary">Su</span></div>
+                                 </th>
+                                <th>
+
+                                </th>
+                            </tr>
+
+                </tbody>
+            </table>
+        </fieldset>
+
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border"><a href="#" style="margin-bottom: 3px" type="button" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-cog"></span></a>  Web radio </legend>
+            <p style="text-align: center;"class="lead {% if player.status == True %}text-primary{% endif %}">radio name</p>
+            {% if radio != None  %}
+                <div class="btn-group btn-group-justified" style="margin-bottom: 20px">
+                    <a href="#" id="play" class="btn btn-primary btn-lg">Play</a>
+                    <a href="#" id="stop" class="btn btn-default btn-lg">Stop</a>
+                </div>
+            {% endif %}
+        </fieldset>
+
+
+
+	      <fieldset class="scheduler-border">
+
+            <legend class="scheduler-border"><a href="#" style="margin-bottom: 3px" type="button" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-cog"></span></a>  Artists & Music </legend>
+            <p style="text-align: center;"class="lead text-primary"><u><b> Artist </b></u>: Artist name / <u><b> Track </b></u>: music name</p>
+                <div class="btn-group btn-group-justified" style="margin-bottom: 20px">
+                    <a href="#" id="play" class="btn btn-primary btn-lg">Play Music (randomly)</a>
+                    <a href="#" id="stop" class="btn btn-default btn-lg">Stop</a>
+                </div>
+        </fieldset>
+    </div>
+
+  </body>
+</html>

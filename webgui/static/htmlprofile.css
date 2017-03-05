@@ -1,0 +1,95 @@
+/*#clock {
+    margin: auto;
+    font-family: courier, monospace;
+    text-align: center;
+    color: #80d4ea;
+    font-size: 32px;
+}*/
+
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.navbar-default {
+  height: 80px;
+  margin-bottom: 3%;
+}
+
+.container {
+  margin-top: 0.5%;
+}
+
+#navbar-titles {
+  font-size: 16pt;
+}
+
+
+.navbar-btn {
+  color: steelblue;
+  font-size: 17pt;
+  margin: 0.6%;
+}
+
+a:hover, a:visited, a:active {
+  color: lightgray!important;
+}
+
+.navbar .btn-primary {
+  color: white;
+}
+
+
+
+/* Homepage CV */
+.container legend {
+  font-size: 19pt;
+  font-weight: bold;
+}
+
+
+#introduction {
+  margin-bottom: 5%;
+}
+
+
+#cv-block {
+  margin-top: 7%;
+  margin-bottom: 6%;
+}
+
+#cv-block table {
+  font-size: 13pt;
+  border-style: ridge;
+}
+
+.corpse-block {
+  margin-left: 3%;
+  margin-right: 3%;
+  font-size: 13pt;
+}
+
+
+
+/* Modals */
+.modal-header {
+  font-size: 16pt;
+  color: #3968A2;
+}
+
+.modal-body {
+  margin: 3%;
+  font-size: 12pt;
+}
+
+.modal-summary {
+  margin-bottom: 3%;
+}
+
+.panel {
+  margin-top: 6%;
+}
+
+.panel-body {
+  color: steelblue;
+}

@@ -1,0 +1,16 @@
+<!-- Navbar -->
+{% load staticfiles %}
+<nav class="navbar navbar-default navbar-static-top navbar-inverse" role="navigation">
+  <div id="navbar-titles">
+    <a title="Isador Akios" class="navbar-brand" href="{% url 'webgui.views.homepage' %}"> <img src="{% static 'dist/img/isador.gif' %}" alt="Isador" /> </a>
+    <p class="navbar-text"> {{ namepage }} </p>
+  </div>
+
+  <div class="container">
+    <a href="{% url 'webgui.views.homepage' %}" class="btn navbar-btn"> Mon CV </a>
+    <a href="{% url 'webgui.views.formations' %}" class="btn navbar-btn"> Formations </a>
+    <a href="{% url 'webgui.views.pro_experiences' %}" class="btn navbar-btn"> Expériences professionnelles </a>
+    <a href="{% url 'webgui.views.association' %}" class="btn navbar-btn"> Activités associatives </a>
+  </div>
+  <a href="https://github.com/isador999" class="btn btn-primary navbar-btn pull-right"> Github Isador </a>
+</nav>

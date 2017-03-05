@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <!-- Head -->
+  {% include 'head.html' %}
+
+  <body>
+    <!-- Navbar -->
+    {% with "Expériences professionnelles" as namepage  %}
+        {% include 'navbar.html' %}
+    {% endwith %}
+
+    {% for thing in experiences_modals %}
+      {% include thing %}
+    {% endfor %}
+
+    <div class="container-fluid corpse-block">
+
+      <div>
+        <fieldset class="table-responsive scheduler-border">
+          <legend class="scheduler-border"> Mes expériences professionnelles </legend>
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th> Détails </th>
+                <th> Début </th>
+                <th> Fin </th>
+                <th> Société </th>
+                <th> Fonction(s) occupée(s) </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td> <a title="Voir le détail" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#modalPJ"><span class="glyphicon glyphicon-menu-hamburger"></span></a>&nbsp;&nbsp; </td>
+                <td> Mai 2016 </td>
+                <td> En cours </td>
+                <td> SII, Rennes - Mission PagesJaunes </td>
+                <td> Ingénierie, intégration Système et automatisation Ansible </td>
+              </tr>
+
+              <tr>
+                <td> <a title="Voir le détail" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#modalSII"><span class="glyphicon glyphicon-menu-hamburger"></span></a>&nbsp;&nbsp; </td>
+                <td> Janvier 2015 </td>
+                <td> Mai 2016 </td>
+                <td> SII, Rennes - Forfait </td>
+                <td> Ingénierie au sein de l’équipe d’Intégration Système </td>
+              </tr>
+
+              <tr>
+                <td> <a title="Voir le détail" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#modalALU"><span class="glyphicon glyphicon-menu-hamburger"></span></a>&nbsp;&nbsp; </td>
+                <td> Septembre 2013 </td>
+                <td> Octobre 2014 </td>
+                <td> Alcatel-Lucent, Rennes </td>
+                <td> R&D Cloud Computing KVM / Openstack Icehouse </td>
+              </tr>
+
+              <tr>
+                <td> <a title="Voir le détail" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#modalSIBIO"><span class="glyphicon glyphicon-menu-hamburger"></span></a>&nbsp;&nbsp; </td>
+                <td> Septembre 2012 </td>
+                <td> Aout 2013 </td>
+                <td> Sibio, Paris </td>
+                <td> Infogérance, conseil, installation et administration de réseaux locaux (Unix/Linux/Windows) </td>
+              </tr>
+
+              <tr>
+                <td> <a title="Voir le détail" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#modalSANDVIK"><span class="glyphicon glyphicon-menu-hamburger"></span></a>&nbsp;&nbsp; </td>
+                <td> Septembre 2010 </td>
+                <td> Août 2012 </td>
+                <td> Sandvik, Orléans </td>
+                <td> Helpdesk et gestion de parc informatique </td>
+              </tr>
+
+              <tr>
+                <td> <a title="Voir le détail" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#modalVH"><span class="glyphicon glyphicon-menu-hamburger"></span></a>&nbsp;&nbsp; </td>
+                <td> Septembre 2008 </td>
+                <td> Septembre 2010 </td>
+                <td> Vauban Humanis, Orléans </td>
+                <td> Helpdesk, brassage informatique et masterisation de postes </td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+      </div>
+    </div>
+  </body>
+</html>

@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from webgui.views import homepage, pro_experiences, association, formations
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', 'views.homepage'),
-    url(r'^homepage/$', 'views.homepage'),
-    url(r'^contact/$', 'views.contact')
+    url(r'^$', homepage),
+    url(r'^formations$', formations),
+    url(r'^professional_experiences$', pro_experiences),
+    url(r'^association$', association)
 ]

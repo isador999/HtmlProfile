@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <!-- Head -->
+  {% include 'head.html' %}
+  <!-- clock js -->
+  {# <script src="{{ STATIC_URL }}clock.js"></script>#}
+  <body>
+    <!-- Navbar -->
+    {% with "Mon CV" as namepage  %}
+        {% include 'navbar.html' %}
+    {% endwith %}
+
+    <div class="container">
+      <fieldset id="introduction" class="scheduler-border">
+        <legend class="scheduler-border"><a type="button" class="btn-primary btn-lg"><span class="glyphicon glyphicon-list"></span></a>&nbsp; <strong class="text-primary"><span id="clock"> {{ date }} </span></strong></legend>
+          <div class="col-lg-offset-1">
+            <div class="text-left" style="font-size: 14pt;">
+              Je m'appelle Jean-Baptiste PHILIPPE, j'ai {{ age }} ans.
+              Je travaille dans le domaine de l'informatique Systèmes et Réseaux depuis quelques années. <br>
+              <br> Ici, vous pourrez retrouver une présentation de mes compétences professionnelles, mon parcours de formation et d'expériences professionnelles, ainsi que mes centres d'intérêt et mes activités associatives.
+              <br> <br> N'hésitez pas à me contacter :)
+            </div>
+          </div>
+      </fieldset>
+
+      <fieldset class="scheduler-border">
+        <legend class="scheduler-border"><a type="button" class="btn-primary btn-lg"><span class="glyphicon glyphicon-list"></span></a>&nbsp; Résumé de compétences </legend>
+          <div class="col-lg-offset-1">
+            <div class="text-left" style="font-size: 14pt;">
+              {% load staticfiles %}
+              <img style="" src="{% static 'dist/img/git.png' %}" alt="Git"/>
+              <img style="" src="{% static 'dist/img/kvm.png' %}" alt="Kvm"/>
+              <img style="" src="{% static 'dist/img/openstack.png' %}" alt="Openstack"/>
+              <img style="" src="{% static 'dist/img/docker.png' %}" alt="Docker"/>
+              <img style="width: 15%;" src="{% static 'dist/img/graylog.png' %}" alt="Graylog"/>
+              <img style="" src="{% static 'dist/img/php.jpg' %}" alt="Php"/> <br>
+              <img style="" src="{% static 'dist/img/pfsense.jpg' %}" alt="Pfsense"/>
+              <img style="" src="{% static 'dist/img/ubuntu.png' %}" alt="Ubuntu"/>
+              <img style="padding-left: 8%;" src="{% static 'dist/img/mysql.jpg' %}" alt="Mysql"/>
+              <img style="" src="{% static 'dist/img/mongodb.png' %}" alt="Mongodb"/>
+              <img style="" src="{% static 'dist/img/sqlite.png' %}" alt="Sqlite"/>
+              <img style="" src="{% static 'dist/img/elasticsearch.png' %}" alt="Elasticsearch"/> <br>
+              <img style="width:9%;" src="{% static 'dist/img/ansible.png' %}" alt="Ansible"/>
+              <img style="padding-left: 8%;" src="{% static 'dist/img/apache.png' %}" alt="Apache"/>
+              <img style="" src="{% static 'dist/img/nginx.png' %}" alt="Nginx"/>
+            </div>
+          </div>
+      </fieldset>
+
+      <div id="cv-block">
+        <fieldset class="table-responsive scheduler-border">
+          <legend class="scheduler-border"> Détail de mes compétences techniques </legend>
+          <!-- <h2><u> Compétences Techniques </u></h2> -->
+          <table class="table table-striped table-hover">
+            <tr>
+              <th> Systèmes d’exploitation </th>
+              <td> Unix/Linux (RHEL/CentOS /Debian /Ubuntu/PfSense) <br> Windows Servers (2003/2008/) </td>
+            </tr>
+
+            <tr>
+              <th> Virtualisation / Cloud </th>
+              <!-- <td> <img src="<?php echo $baseUrl."/".$minilang[$_SESSION['language']]['icon'][$infos_idea['language']]['png']; ?>" alt="langue de l'événement" />  </td> -->
+              <td> VmWare ESX, Hyper-V, Openstack, KVM, OpenvSwitch </td>
+            </tr>
+
+            <tr>
+              <th> Conteneurisation </th>
+              <td> Docker : Création d’images, découverte du clustering Swarm </td>
+            </tr>
+
+            <tr>
+              <th> Scripting </th>
+              <td> Python / Bash / Expect / XML </td>
+            </tr>
+
+            <tr>
+              <th> Développement </th>
+              <td> PHP / HTML / CSS / JS / jQuery / Bootstrap3 / Python (framework Django) </td>
+            </tr>
+
+            <tr>
+              <th> Serveurs applicatifs </th>
+              <td> Tomcat, Talend/Karaf </td>
+            </tr>
+
+            <tr>
+              <th> Outillage </th>
+              <td> Git, SVN, Wireshark, tcpdump, tshark, netstat, ping, sed, grep, Keychain, ...  </td>
+            </tr>
+
+            <tr>
+              <th> SGBD </th>
+              <td> MySQL, Oracle, SQL Server, SQLite, MongoDB </td>
+            </tr>
+
+            <tr>
+              <th> Messagerie </th>
+              <td> Postfix, Dovecot, SquirrelMail </td>
+            </tr>
+
+            <tr>
+              <th> Sécurité </th>
+              <td> Iptables, clés SSH, droits d’accès, portail captif PfSense, Squid, NMAP, Ettercap/MITM, Aircrack-Ng, SSLStrip, Nikto, ZAProxy </td>
+            </tr>
+
+            <tr>
+              <th> Annuaires </th>
+              <td> Active Directory </td>
+            </tr>
+
+            <tr>
+              <th> Web </th>
+              <td> Apache, Nginx, Cherokee, IIS </td>
+            </tr>
+
+            <tr>
+              <th> Supervision / Métrologie </th>
+              <td> Nagios, Centreon, Munin </td>
+            </tr>
+
+            <tr>
+              <th> Stockage et HA </th>
+              <td> RAID (0, 1, 5), DRBD, Keepalived </td>
+            </tr>
+
+            <tr>
+              <th> Services réseaux </th>
+              <td> Bind9, dhcp3-server, dnsmasq </td>
+            </tr>
+
+            <tr>
+              <th> Protocoles </th>
+              <td> ARP, Spanning-Tree, RIP, OSPF, 802.1Q, TCP / UDP, NFS, SMB </td>
+            </tr>
+          </table>
+        </fieldset>
+      </div>
+
+
+
+        <!-- <fieldset class="scheduler-border">
+            <legend class="scheduler-border"><a href="#" style="margin-bottom: 3px" type="button" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-cog"></span></a>  Web radio </legend>
+            <p style="text-align: center;"class="lead {% if player.status == True %}text-primary{% endif %}">radio name</p>
+            {% if radio != None  %}
+                <div class="btn-group btn-group-justified" style="margin-bottom: 20px">
+                    <a href="#" id="play" class="btn btn-primary btn-lg">Play</a>
+                    <a href="#" id="stop" class="btn btn-default btn-lg">Stop</a>
+                </div>
+            {% endif %}
+        </fieldset>
+
+
+
+	      <fieldset class="scheduler-border">
+
+            <legend class="scheduler-border"><a href="#" style="margin-bottom: 3px" type="button" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-cog"></span></a>  Artists & Music </legend>
+            <p style="text-align: center;"class="lead text-primary"><u><b> Artist </b></u>: Artist name / <u><b> Track </b></u>: music name</p>
+                <div class="btn-group btn-group-justified" style="margin-bottom: 20px">
+                    <a href="#" id="play" class="btn btn-primary btn-lg">Play Music (randomly)</a>
+                    <a href="#" id="stop" class="btn btn-default btn-lg">Stop</a>
+                </div>
+        </fieldset> -->
+    </div>
+
+  </body>
+</html>
