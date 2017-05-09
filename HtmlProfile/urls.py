@@ -20,6 +20,7 @@ from webgui.views import homepage, pro_experiences, association, formations
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', homepage),
+    url(r'^pdf_cv$', pdf_cv),
     url(r'^formations$', formations),
     url(r'^professional_experiences$', pro_experiences),
     url(r'^association$', association)
