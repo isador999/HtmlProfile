@@ -1,17 +1,22 @@
 <!-- Navbar -->
-{% load staticfiles %}
+{# {% load staticfiles %}#}
 <nav class="navbar navbar-default navbar-static-top navbar-inverse" role="navigation">
-  <div id="navbar-titles">
-    <a title="Isador Akios" class="navbar-brand" href="{% url 'webgui.views.homepage' %}"> <img src="{% static 'dist/img/isador.gif' %}" alt="Isador" /> </a>
+  <div id="navbar-titles" class="col-lg-2">
+    <a title="Isador Akios" class="navbar-brand" href="{{ url('homepage') }}"> <img src="{{ static('dist/img/isador.gif') }}" alt="Isador" /> </a>
     <p class="navbar-text"> {{ namepage }} </p>
   </div>
 
-  <div class="container">
-    <a href="{% url 'webgui.views.homepage' %}" class="btn navbar-btn"> Mon CV </a>
-    <a href="{% url 'webgui.views.formations' %}" class="btn navbar-btn"> Formations </a>
-    <a href="{% url 'webgui.views.pro_experiences' %}" class="btn navbar-btn"> Expériences professionnelles </a>
-    <a href="{% url 'webgui.views.association' %}" class="btn navbar-btn"> Activités associatives </a>
+  <div class="col-lg-8">
+    <!-- <div class="col-lg-8"> -->
+      <a href="{{ url('homepage') }}" class="col-lg-2 btn navbar-btn"> Mon CV </a>
+      <a href="{{ url('formations') }}" class="col-lg-2 btn navbar-btn"> Formations </a>
+      <a href="{{ url('pro_experiences') }}" class="col-lg-4 btn navbar-btn"> Expériences professionnelles </a>
+      <a href="{{ url('association') }}" class="col-lg-3 btn navbar-btn"> Association & Loisirs </a>
+    <!-- </div> -->
   </div>
-  <a href="https://github.com/isador999" class="btn btn-primary navbar-btn pull-right"> Github Isador </a>
-  <a href="{% url 'webgui.views.pdf_cv' %}" class="btn btn-primary navbar-btn pull-right"> Télécharger mon CV </a>
+
+  <div class="col-lg-2">
+    <a href="https://github.com/isador999" class="btn btn-primary navbar-btn pull-right"> Github Isador </a>
+  </div>
+  {# <a href="{% url 'webgui.views.pdf_cv' %}" class="btn btn-primary navbar-btn pull-right"> Télécharger mon CV </a>#}
 </nav>

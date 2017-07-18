@@ -53,8 +53,40 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'HtmlProfile.urls'
 
+# TEMPLATES = [
+#     {
+#         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+#         'DIRS': [ os.path.join(BASE_DIR, 'webgui/template/') ],
+#         'APP_DIRS': True,
+#         'OPTIONS': {
+#             'context_processors': [
+#                 'django.template.context_processors.debug',
+#                 'django.template.context_processors.request',
+#                 'django.contrib.auth.context_processors.auth',
+#                 'django.contrib.messages.context_processors.messages',
+#             ],
+#         },
+#     },
+# ]
+
 TEMPLATES = [
     {
+        'BACKEND': 'django.template.backends.jinja2.Jinja2',
+        'DIRS': [ os.path.join(BASE_DIR, 'webgui/template/') ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'extensions': [
+                "jinja2.ext.do",
+                "jinja2.ext.loopcontrols",
+                "jinja2.ext.with_",
+                "jinja2.ext.i18n",
+                "jinja2.ext.autoescape",
+                ],
+            'environment': 'webgui.jinja2.environment'
+        },
+    },
+    {
+
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [ os.path.join(BASE_DIR, 'webgui/template/') ],
         'APP_DIRS': True,
@@ -64,10 +96,18 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                # 'django.template.context_processors.static',
+                # 'django.template.context_processors.staticfiles',
+                'django.template.context_processors.tz',
+            ]
+        }
+    }
 ]
+
+
+
 
 WSGI_APPLICATION = 'HtmlProfile.wsgi.application'
 
@@ -75,10 +115,21 @@ WSGI_APPLICATION = 'HtmlProfile.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'HtmlProfile',
+        'USER': 'root',
+        'PASSWORD': 'passwd',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 

@@ -15,13 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from webgui.views import homepage, pro_experiences, association, formations
+from webgui import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', homepage),
-    url(r'^pdf_cv$', pdf_cv),
-    url(r'^formations$', formations),
-    url(r'^professional_experiences$', pro_experiences),
-    url(r'^association$', association)
+    url(r'^$', views.homepage, name='homepage'),
+    url(r'^homepage/$', views.homepage, name='homepage'),
+    url(r'^formations/$', views.formations, name='formations'),
+    url(r'^professional_experiences/$', views.pro_experiences, name='pro_experiences'),
+    url(r'^association/$', views.association, name='association')
 ]
