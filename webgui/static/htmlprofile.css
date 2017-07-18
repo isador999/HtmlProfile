@@ -22,8 +22,18 @@ body {
 
 #navbar-titles {
   font-size: 16pt;
+  /*background-color: green;*/
 }
 
+#navbar-menu {
+  padding-top: 0.55%;
+  /*background-color: darkblue;*/
+}
+
+#github {
+  padding-top: 0.8%;
+  padding-left: 1.1%;
+}
 
 .navbar-btn {
   color: steelblue;

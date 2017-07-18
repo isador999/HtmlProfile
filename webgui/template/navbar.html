@@ -1,22 +1,25 @@
 <!-- Navbar -->
 {# {% load staticfiles %}#}
 <nav class="navbar navbar-default navbar-static-top navbar-inverse" role="navigation">
-  <div id="navbar-titles" class="col-lg-2">
-    <a title="Isador Akios" class="navbar-brand" href="{{ url('homepage') }}"> <img src="{{ static('dist/img/isador.gif') }}" alt="Isador" /> </a>
-    <p class="navbar-text"> {{ namepage }} </p>
+  <div class="container-fluid">
+    <div id="navbar-titles" class="row">
+      <div class="col-lg-3">
+        <a title="Isador Akios" class="col-lg-push-1 col-lg-3 navbar-brand" href="{{ url('homepage') }}"> <img src="{{ static('dist/img/isador.gif') }}" alt="Isador" /> </a>
+        <p class="col-lg-6 navbar-text"> {{ namepage }} </p>
+      </div>
+
+      <div id="navbar-menu" class="row col-lg-8">
+        <a href="{{ url('homepage') }}" class="col-lg-1 btn navbar-btn"> Mon CV </a>
+        <a href="{{ url('formations') }}" class="col-lg-2 btn navbar-btn"> Formations </a>
+        <a href="{{ url('pro_experiences') }}" class="col-lg-4 btn navbar-btn"> Expériences professionnelles </a>
+        <a href="{{ url('association') }}" class="col-lg-4 btn navbar-btn"> Association & Loisirs </a>
+      </div>
+    </div>
   </div>
 
-  <div class="col-lg-8">
-    <!-- <div class="col-lg-8"> -->
-      <a href="{{ url('homepage') }}" class="col-lg-2 btn navbar-btn"> Mon CV </a>
-      <a href="{{ url('formations') }}" class="col-lg-2 btn navbar-btn"> Formations </a>
-      <a href="{{ url('pro_experiences') }}" class="col-lg-4 btn navbar-btn"> Expériences professionnelles </a>
-      <a href="{{ url('association') }}" class="col-lg-3 btn navbar-btn"> Association & Loisirs </a>
-    <!-- </div> -->
-  </div>
+    <div id="github" class="row">
+      <a href="https://github.com/isador999" class="btn-sm btn-primary navbar-btn"> Github Isador </a>
+    </div>
 
-  <div class="col-lg-2">
-    <a href="https://github.com/isador999" class="btn btn-primary navbar-btn pull-right"> Github Isador </a>
-  </div>
   {# <a href="{% url 'webgui.views.pdf_cv' %}" class="btn btn-primary navbar-btn pull-right"> Télécharger mon CV </a>#}
 </nav>
