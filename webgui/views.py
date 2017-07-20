@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import render, redirect, get_object_or_404
-from webgui.models import Skill, Formation, Experience, Modal, Leisure
+from webgui.models import *
 import os
 from django.http import HttpResponse
 from time import strftime
@@ -34,11 +34,14 @@ def homepage(request):
     clock = strftime("%H:%M:%S")
 
     skills = Skill.objects.all()
+    tags = Tag.objects.all()
 
     return render(request, 'homepage.html', {'clock': clock,
                                              'date': currentdate,
                                              'age': age,
-                                             'skills': skills})
+                                             'skills': skills,
+                                             'tags': tags})
+
 
 def pro_experiences(request):
     # experiences_modals = ['modals/modalPJ.html', 'modals/modalSII.html', 'modals/modalALU.html', 'modals/modalSIBIO.html', 'modals/modalSANDVIK.html', 'modals/modalVH.html']

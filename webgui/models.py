@@ -8,6 +8,14 @@ class Skill(models.Model):
     label = models.CharField(max_length=50, null=True)
     technologies = models.TextField(null=True)
 
+class Tag(models.Model):
+    # EXTENSION_CHOICES = (
+    #     (True,'png'),
+    #     (False,'jpg')
+    # )
+    img = models.CharField(max_length=30, null=True)
+    extension = models.CharField(max_length=4, null=True)
+
 class Modal(models.Model):
     title = models.CharField(max_length=15, null=True)
     text = models.TextField(null=True)

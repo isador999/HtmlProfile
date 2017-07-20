@@ -18,6 +18,7 @@ body {
 
 #navbar-span, #navbar-span a {
   font-size: 13pt;
+  margin-right: 6px;
 }
 
 .text-format {

@@ -8,10 +8,10 @@
     {% set namepage = "Mon CV" %}
     {% include 'navbar.html' %}
 
-    <div class="container-fluid col-lg-offset-1 col-lg-9">
+    <div class="container-fluid col-lg-offset-2 col-lg-8">
       <div class="row">
         <fieldset id="introduction" class=" scheduler-border">
-          <legend class="scheduler-border"><p type="button" class="col-lg-3 btn-primary btn-lg"><span class="glyphicon glyphicon-list"></span>&nbsp; <span class="text-default"> Présentation </span></p></legend>
+          <legend class="scheduler-border"><p type="button" class="col-lg-3 btn-primary btn-lg"><span class="glyphicon glyphicon-list-alt"></span>&nbsp; <span class="text-default"> Présentation </span></p></legend>
             <div class="col-lg-offset-1 text-left text-format">
               Je m'appelle Jean-Baptiste PHILIPPE, j'ai {{ age }} ans.
               Je travaille dans le domaine de l'informatique Systèmes et Réseaux depuis quelques années. <br>
@@ -21,25 +21,15 @@
           </fieldset>
         </div>
 
+
+
         <div class="row">
           <fieldset class="scheduler-border">
-            <legend class="scheduler-border"><p type="button" class="col-lg-3 btn-primary btn-lg"><span class="glyphicon glyphicon-list"></span>&nbsp; <span class="text-default"> Résumé de compétences </span></p></legend>
-              <div class="col-lg-offset-1 col-lg-9 text-left text-format">
-                <img class="skills_png" src="{{ static('dist/img/git.png') }}" alt="Git"/>
-                <img class="skills_png" src="{{ static('dist/img/kvm.png') }}" alt="Kvm"/>
-                <img class="skills_png" src="{{ static('dist/img/openstack.png') }}" alt="Openstack"/>
-                <img class="skills_png" src="{{ static('dist/img/docker.png') }}" alt="Docker"/>
-                <img class="skills_png" src="{{ static('dist/img/php.jpg') }}" alt="Php"/>
-                <img class="skills_png" src="{{ static('dist/img/pfsense.jpg') }}" alt="Pfsense"/>
-                <img class="skills_png" src="{{ static('dist/img/ubuntu.png') }}" alt="Ubuntu"/>
-                <img class="skills_png" src="{{ static('dist/img/mysql.jpg') }}" alt="Mysql"/>
-                <img class="skills_png" src="{{ static('dist/img/mongodb.png') }}" alt="Mongodb"/>
-                <img class="skills_png" src="{{ static('dist/img/sqlite.png') }}" alt="Sqlite"/>
-                <img class="skills_png" src="{{ static('dist/img/elasticsearch.png') }}" alt="Elasticsearch"/>
-                <img class="skills_png" style="width: 18%;" src="{{ static('dist/img/graylog.png') }}" alt="Graylog"/>
-                <img class="skills_png" style="width:16%;" src="{{ static('dist/img/ansible.png') }}" alt="Ansible"/>
-                <img class="skills_png" src="{{ static('dist/img/apache.png') }}" alt="Apache"/>
-                <img class="skills_png" src="{{ static('dist/img/nginx.png') }}" alt="Nginx"/>
+            <legend class="scheduler-border"><p type="button" class="col-lg-4 btn-primary btn-lg"><span class="glyphicon glyphicon-list-alt"></span>&nbsp; <span class="text-default"> Résumé de compétences </span></p></legend>
+              <div class="col-lg-offset-1 col-lg-11 text-left text-format">
+              {% for tag in tags %}
+                <img class="skills_png" src="{{ static('dist/img/'+tag.img+'.'+tag.extension) }}" alt="{{ tag.img }}"/>
+              {% endfor %}
               </div>
           </fieldset>
         </div>
