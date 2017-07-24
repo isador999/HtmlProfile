@@ -6,31 +6,52 @@
   <body>
     <!-- Navbar -->
     {% set namepage = "Association & Loisirs" %}
-        {% include 'navbar.html' %}
+    {% include 'navbar.html' %}
 
     <div class="container-fluid col-lg-9 corpse-block">
-      <div>
+
+      <div class="row">
         <fieldset class="col-lg-offset-1 scheduler-border">
-          <legend class="scheduler-border"> Association Gozpeak à Rennes </legend>
+          <legend class="scheduler-border"><p type="button" class="col-lg-3 btn-primary btn-lg"><span class="glyphicon glyphicon-book"></span>&nbsp; <span class="text-default"> Sports et Loisirs </span></p></legend>
+          <div class="col-lg-offset-1">
+            <table class="table table-striped table-hover">
+              {% for leisure in leisures %}
+                <tr>
+                  <th> {{ leisure.label|capitalize }} </th>
+                  <td> {{ leisure.description|safe }} </td>
+                </tr>
+              {% else %}
+                <h3> Aucune entrée enregistrée. </h3>
+              {% endfor %}
+            </table>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <div class="row">
+        <fieldset class="col-lg-offset-1 scheduler-border">
+          <legend class="scheduler-border"><p type="button" class="col-lg-3 btn-primary btn-lg"><span class="glyphicon glyphicon-book"></span>&nbsp; <span class="text-default"> Association Gozpeak </span></p></legend>
           <div class="col-lg-offset-1">
             Ma passion pour les langues étrangères s'est manifestée en 2014, alors que je venais de finir mes études et que j'étais en recherche d'emploi.
             J'ai commencé par une ou deux soirées pour parler anglais dans les bars, dans le but d'améliorer mon anglais oral.
             <br>
               Lors de l'une des soirées, j'ai pu rencontrer un ami espagnol, qui m'a alors parlé de son projet :
               - Promouvoir la pratique des langues étrangères au travers de nombreuses activités sportives, culturelles voire gastronomiques.
-              <br>
+            <br>
               Nous avons donc réfléchi au concept, à quels types d'activité organiser, et nous avons donc décidé de créer une association rennaise :
               => Gozpeak !
-              <br>
+            <br>
               Avant la création de cette association en Janvier 2017, j'ai créé un site Internet afin que les gens de Rennes puissent parcourir les différentes sorties proposées par Gozpeak (ou par d'autres partenaires).
               Les utilisateurs peuvent également proposer leurs propres idées d'activités, le but étant de permettre aux gens de rencontrer des natifs pour améliorer leur niveau.
-              <br>
-              <br>
+            <br>
+            <br>
               Je suis aujourd'hui le président de cette association et m'occupe toujours actuellement de faire évoluer le site, <br>
               qui est accessible à l'adresse suivante : &nbsp; <a title="Site de Gozpeak" href="https://gozpeak.com"> https://www.gozpeak.com </a>
-            </div>
+          </div>
         </fieldset>
       </div>
     </div>
   </body>
 </html>
+

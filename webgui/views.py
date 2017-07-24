@@ -9,20 +9,6 @@ import locale
 
 
 def homepage(request):
-    # try:
-    #     radio = Webradio.objects.get(selected=1)
-    # except Webradio.DoesNotExist:
-    #     radio = None
-
-    # try:
-    #     music = Music.objects.get(selected=1)
-    # except Music.DoesNotExist:
-    #     music = None
-
-    # try:
-    #     artist = Artist.objects.get(selected=1)
-    # except Artist.DoesNotExist:
-    #     artist = None
     locale.setlocale(locale.LC_ALL, 'fr_FR.UTF-8')
     currentdate = datetime.date.today()
     birthdate = datetime.date(1989, 9, 17)
@@ -44,7 +30,6 @@ def homepage(request):
 
 
 def pro_experiences(request):
-    # experiences_modals = ['modals/modalPJ.html', 'modals/modalSII.html', 'modals/modalALU.html', 'modals/modalSIBIO.html', 'modals/modalSANDVIK.html', 'modals/modalVH.html']
     try:
         experiences_list = Experience.objects.all()
         for experience in experiences_list:
@@ -57,7 +42,6 @@ def pro_experiences(request):
 
 
 def formations(request):
-    # formations_modals = ['modals/modalENI.html', 'modals/modalAFTEC.html', 'modals/modalSTPAUL.html']
     try:
         formations_list = Formation.objects.all()
         for formation in formations_list:
@@ -70,7 +54,12 @@ def formations(request):
 
 
 def association(request):
-    return render(request, 'association.html')
+    try:
+        leisures = Leisure.objects.all()
+    except Leisure.DoesNotExist:
+        leisures = None
+
+    return render(request, 'association.html', {'leisures':leisures})
 
 
 # def pdf_cv(request):

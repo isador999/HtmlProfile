@@ -11,21 +11,19 @@
     <div class="container-fluid col-lg-offset-2 col-lg-8">
       <div class="row">
         <fieldset id="introduction" class=" scheduler-border">
-          <legend class="scheduler-border"><p type="button" class="col-lg-3 btn-primary btn-lg"><span class="glyphicon glyphicon-list-alt"></span>&nbsp; <span class="text-default"> Présentation </span></p></legend>
+          <legend class="scheduler-border"><p type="button" class="col-lg-3 btn-primary btn-lg"><span class="glyphicon glyphicon-tasks"></span>&nbsp; <span class="text-default"> Présentation </span></p></legend>
             <div class="col-lg-offset-1 text-left text-format">
               Je m'appelle Jean-Baptiste PHILIPPE, j'ai {{ age }} ans.
               Je travaille dans le domaine de l'informatique Systèmes et Réseaux depuis quelques années. <br>
               <br> Ici, vous pourrez retrouver une présentation de mes compétences professionnelles, mon parcours de formation et d'expériences professionnelles, ainsi que mes centres d'intérêt et mes activités associatives.
-              <br> <br> N'hésitez pas à me contacter :)
+              <br> <br> N'hésitez pas à me contacter à l'adresse : jean-baptiste.philippe@tutanota.de :)
             </div>
           </fieldset>
         </div>
 
-
-
         <div class="row">
           <fieldset class="scheduler-border">
-            <legend class="scheduler-border"><p type="button" class="col-lg-4 btn-primary btn-lg"><span class="glyphicon glyphicon-list-alt"></span>&nbsp; <span class="text-default"> Résumé de compétences </span></p></legend>
+            <legend class="scheduler-border"><p type="button" class="col-lg-4 btn-primary btn-lg"><span class="glyphicon glyphicon-tags"></span>&nbsp; <span class="text-default"> Résumé de compétences </span></p></legend>
               <div class="col-lg-offset-1 col-lg-11 text-left text-format">
               {% for tag in tags %}
                 <img class="skills_png" src="{{ static('dist/img/'+tag.img+'.'+tag.extension) }}" alt="{{ tag.img }}"/>
