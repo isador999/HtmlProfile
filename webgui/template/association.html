@@ -8,17 +8,16 @@
     {% set namepage = "Association & Loisirs" %}
     {% include 'navbar.html' %}
 
-    <div class="container-fluid col-lg-9 corpse-block">
-
+    <div class="container-fluid col-lg-10 corpse-block">
       <div class="row">
         <fieldset class="col-lg-offset-1 scheduler-border">
           <legend class="scheduler-border"><p type="button" class="col-lg-3 btn-primary btn-lg"><span class="glyphicon glyphicon-book"></span>&nbsp; <span class="text-default"> Sports et Loisirs </span></p></legend>
           <div class="col-lg-offset-1">
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-bordered table-hover">
               {% for leisure in leisures %}
                 <tr>
-                  <th> {{ leisure.label|capitalize }} </th>
-                  <td> {{ leisure.description|safe }} </td>
+                  <th class="col-lg-4"> {{ leisure.label|capitalize }} </th>
+                  <td class="col-lg-7"> {{ leisure.description|safe }} </td>
                 </tr>
               {% else %}
                 <h3> Aucune entrée enregistrée. </h3>
@@ -28,10 +27,9 @@
         </fieldset>
       </div>
 
-
-      <div class="row">
+      <div id="association" class="row">
         <fieldset class="col-lg-offset-1 scheduler-border">
-          <legend class="scheduler-border"><p type="button" class="col-lg-3 btn-primary btn-lg"><span class="glyphicon glyphicon-book"></span>&nbsp; <span class="text-default"> Association Gozpeak </span></p></legend>
+          <legend class="scheduler-border"><p type="button" class="col-lg-4 btn-primary btn-lg"><span class="glyphicon glyphicon-book"></span>&nbsp; <span class="text-default"> Association Gozpeak </span></p></legend>
           <div class="col-lg-offset-1">
             Ma passion pour les langues étrangères s'est manifestée en 2014, alors que je venais de finir mes études et que j'étais en recherche d'emploi.
             J'ai commencé par une ou deux soirées pour parler anglais dans les bars, dans le but d'améliorer mon anglais oral.
@@ -52,6 +50,8 @@
         </fieldset>
       </div>
     </div>
+
+    {% include 'footer.html' %}
+
   </body>
 </html>
-

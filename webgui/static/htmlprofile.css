@@ -1,19 +1,10 @@
-/*#clock {
-    margin: auto;
-    font-family: courier, monospace;
-    text-align: center;
-    color: #80d4ea;
-    font-size: 32px;
-}*/
-
-
 body {
   font-family: Helvetica, sans-serif;
 }
 
 .navbar-default {
   height: 80px;
-  margin-bottom: 6%;
+  margin-bottom: 3.5%;
 }
 
 #navbar-span, #navbar-span a {
@@ -23,16 +14,13 @@ body {
 
 .text-format {
   font-size: 14pt;
-  /*background-color: green;*/
 }
 
 #navbar-menu {
   padding-top: 0.58%;
-  /*background-color: darkblue;*/
 }
 
 .navbar-btn {
-  /*color: steelblue;*/
   font-size: 17pt;
   margin: 0.6%;
 }
@@ -50,25 +38,38 @@ a:hover, a:visited, a:active {
 /* Homepage CV */
 .container-fluid legend {
   font-size: 17pt;
-  /*font-weight: bold;*/
 }
 
-#introduction {
+/*#introduction {
   margin-bottom: 5%;
+}*/
+
+fieldset {
+  margin: 3%;
 }
 
 .skills_png {
   padding-left: 6%;
 }
 
-#cv-block {
+/*#cv-block {
   margin-top: 7%;
-  margin-bottom: 6%;
-}
+  margin-bottom: 3%;
+}*/
 
 #cv-block table {
   font-size: 13pt;
   border-style: ridge;
+}
+
+#association {
+  margin-bottom: 7%;
+}
+
+footer {
+  margin: 1.5%;
+  font-size: 13pt;
+  font-style: italic;
 }
 
 .corpse-block {
