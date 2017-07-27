@@ -77,13 +77,12 @@
                 <td> Baccalauréat professionnel MRIM (Micro-informatique et réseaux) </td>
                 <td> <span class="label label-success">Oui</span> </td>
               </tr> -->
+            {% else %}
+              <h4> Aucune expérience pour le moment. </h4>
+            {% endfor %}
 
             </tbody>
           </table>
-
-          {% else %}
-            <h4> Aucune expérience pour le moment. </h4>
-          {% endfor %}
 
         </fieldset>
       </div>
