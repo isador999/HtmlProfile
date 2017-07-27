@@ -1,0 +1,12 @@
+/* TEAM */
+Your title: PHILIPPE Jean-Baptiste.
+Site: jean-baptiste.philippe@tutanota.de
+Location: Rennes, France.
+
+
+/* SITE */
+Last update: 2017/07/28
+Standards: HTML5, CSS3. 
+Components: Bootstrap3, jQuery, etc.
+Software: Django 1.10
+

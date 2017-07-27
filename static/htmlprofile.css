@@ -1,0 +1,104 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.navbar-default {
+  height: 80px;
+  margin-bottom: 3.5%;
+}
+
+#navbar-span, #navbar-span a {
+  font-size: 13pt;
+  margin-right: 6px;
+}
+
+.text-format {
+  font-size: 14pt;
+}
+
+#navbar-menu {
+  padding-top: 0.58%;
+}
+
+.navbar-btn {
+  font-size: 17pt;
+  margin: 0.6%;
+}
+
+a:hover, a:visited, a:active {
+  color: lightgray!important;
+}
+
+.navbar .btn-primary {
+  color: white;
+}
+
+
+
+/* Homepage CV */
+.container-fluid legend {
+  font-size: 17pt;
+}
+
+/*#introduction {
+  margin-bottom: 5%;
+}*/
+
+fieldset {
+  margin: 3%;
+}
+
+.skills_png {
+  padding-left: 6%;
+}
+
+/*#cv-block {
+  margin-top: 7%;
+  margin-bottom: 3%;
+}*/
+
+#cv-block table {
+  font-size: 13pt;
+  border-style: ridge;
+}
+
+#association {
+  margin-bottom: 7%;
+}
+
+footer {
+  margin: 1.5%;
+  font-size: 13pt;
+  font-style: italic;
+}
+
+.corpse-block {
+  margin-left: 3%;
+  margin-right: 3%;
+  font-size: 13pt;
+}
+
+
+
+/* Modals */
+.modal-header {
+  font-size: 16pt;
+  color: #3968A2;
+}
+
+.modal-body {
+  margin: 3%;
+  font-size: 12pt;
+}
+
+.modal-summary {
+  margin-bottom: 3%;
+}
+
+.panel {
+  margin-top: 6%;
+}
+
+.panel-body {
+  color: steelblue;
+}
