@@ -26,7 +26,7 @@
             <legend class="scheduler-border"><p type="button" class="col-lg-4 btn-primary btn-lg"><span class="glyphicon glyphicon-tags"></span>&nbsp; <span class="text-default"> Résumé de compétences </span></p></legend>
               <div class="col-lg-offset-1 col-lg-11 text-left text-format">
               {% for tag in tags %}
-                <img class="skills_png" src="{{ static('dist/img/'+tag.img+'.'+tag.extension) }}" alt="{{ tag.img }}"/>
+                <img title="{{ tag.img|capitalize }}" class="skills_png" src="{{ static('dist/img/'+tag.img+'.'+tag.extension) }}" alt="{{ tag.img|capitalize }}"/>
               {% endfor %}
               </div>
           </fieldset>
