@@ -30,7 +30,7 @@
               {% for formation in formations_list %}
               {# {% with directory="modals/" extension=".html" %}#}
 
-                {% set modal_id, modal_name, modal_text, modal_keywords = formation.modal.title, formation.name, formation.modal.text, formation.modal.keywords %}
+                {% set modal_id, modal_name, modal_company, modal_text, modal_keywords = formation.modal.title, formation.name, formation.company, formation.modal.text, formation.modal.keywords %}
                 {% include "modals/generic-modal.html" %}
 
                 {# {% include directory|add:formation.modal.title|add:extension %}#}
