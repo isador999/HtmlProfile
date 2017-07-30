@@ -36,6 +36,7 @@ class Experience(models.Model):
     end_date = models.DateField(null=True)
     company = models.CharField(max_length=50, null=True)
     context = models.CharField(max_length=100, null=True)
+    contract = models.CharField(max_length=150, null=True)
     modal = models.OneToOneField(Modal, null=True)
 
 class Leisure(models.Model):

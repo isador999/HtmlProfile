@@ -20,6 +20,7 @@
                 <th> Fin </th>
                 <th> Société </th>
                 <th> Fonction(s) occupée(s) </th>
+                <th> Type de contrat </th>
               </tr>
             </thead>
 
@@ -35,6 +36,7 @@
                 <td> {{ experience.end_date|capitalize }} </td>
                 <td> {{ experience.company }} </td>
                 <td> {{ experience.context }} </td>
+                <td> <span class="label label-info"> {{ experience.contract }} </span></td>
               </tr>
 
 
