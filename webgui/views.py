@@ -36,6 +36,8 @@ def pro_experiences(request):
             locale.setlocale(locale.LC_ALL, 'fr_FR.UTF-8')
             experience.start_date = experience.start_date.strftime("%B %Y")
             experience.end_date = experience.end_date.strftime("%B %Y")
+            experience.start_date = experience.start_date.decode("utf8")
+            experience.end_date = experience.end_date.decode("utf8")
     except Experience.DoesNotExist:
         experiences_list = None
     return render(request, 'pro_experiences.html', {'experiences_list': experiences_list})
@@ -48,6 +50,8 @@ def formations(request):
             locale.setlocale(locale.LC_ALL, 'fr_FR.UTF-8')
             formation.start_date = formation.start_date.strftime("%B %Y")
             formation.end_date = formation.end_date.strftime("%B %Y")
+            formation.start_date = formation.start_date.decode("utf8")
+            formation.end_date = formation.end_date.decode("utf8")
     except Formation.DoesNotExist:
         formations_list = None
     return render(request, 'formations.html', {'formations_list': formations_list})
