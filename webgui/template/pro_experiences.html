@@ -29,10 +29,8 @@
               {% set modal_id, modal_name, modal_company, modal_text, modal_keywords = experience.modal.title, experience.context, experience.company, experience.modal.text, experience.modal.keywords %}
               {% include "modals/generic-modal.html" %}
 
-              {# {% include "modals/modalPJ.html" %}#}
-
               <tr>
-                <td> <a title="Voir le détail" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#generic_modal"><span class="glyphicon glyphicon-menu-hamburger"></span></a>&nbsp;&nbsp; </td>
+                <td> <a title="Voir le détail" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#{{ modal_id }}"><span class="glyphicon glyphicon-menu-hamburger"></span></a>&nbsp;&nbsp; </td>
                 <td> {{ experience.start_date|capitalize }} </td>
                 <td> {{ experience.end_date|capitalize }} </td>
                 <td> {{ experience.company }} </td>

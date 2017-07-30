@@ -28,15 +28,11 @@
             <tbody>
 
               {% for formation in formations_list %}
-              {# {% with directory="modals/" extension=".html" %}#}
-
                 {% set modal_id, modal_name, modal_company, modal_text, modal_keywords = formation.modal.title, formation.name, formation.company, formation.modal.text, formation.modal.keywords %}
-                {% include "modals/generic-modal.html" %}
-
-                {# {% include directory|add:formation.modal.title|add:extension %}#}
+                {% include "modals/generic-modal.html" with context %}
 
                 <tr>
-                  <td> <a title="Voir le détail" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#generic_modal"><span class="glyphicon glyphicon-menu-hamburger"></span></a>&nbsp;&nbsp; </td>
+                  <td> <a title="Voir le détail" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#{{ modal_id }}"><span class="glyphicon glyphicon-menu-hamburger"></span></a>&nbsp;&nbsp; </td>
                   <td> {{ formation.start_date|capitalize }} </td>
                   <td> {{ formation.end_date|capitalize }} </td>
                   <td> {{ formation.company }} </td>
