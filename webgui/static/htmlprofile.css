@@ -80,14 +80,19 @@ footer {
 
 
 
+
 /* Modals */
 .modal-header {
   font-size: 16pt;
   color: #3968A2;
 }
 
+.modal-title {
+  margin-left: 6%;
+}
+
 .modal-body {
-  margin: 3%;
+  margin: 5%;
   font-size: 12pt;
 }
 
@@ -96,9 +101,7 @@ footer {
 }
 
 .panel {
-  margin-top: 6%;
-}
-
-.panel-body {
-  color: steelblue;
+  margin-top: 8%;
+  margin-bottom: -2%;
+  font-family: fantasy;
 }

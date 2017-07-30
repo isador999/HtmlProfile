@@ -3,16 +3,23 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h2 class="modal-title">
-					{{ modal_company }}
-				</h2>
-				<h3>
-					<i> {{ modal_name }} </i>
-				</h3>
+				<div class="modal-title">
+					<h2>
+						{{ modal_company }}
+					</h2>
+					<h3>
+						<i> {{ modal_name }} </i>
+					</h3>
+				</div>
 			</div>
 
 			<div class="modal-body">
 				{{ modal_text|safe }}
+
+				<div class="panel panel-primary">
+					<div class="panel-heading"> Mots-clés </div>
+  				<div class="panel-body"> <strong> {{ modal_keywords }} </strong></div>
+				</div>
 			</div>
 
 			<div class="modal-footer">
